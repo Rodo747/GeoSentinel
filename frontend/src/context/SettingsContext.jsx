@@ -1,5 +1,5 @@
 // Settings context for app configuration
-
+import { createContext, useState } from 'react'
 const SettingsContext = createContext(null)
 
 export function SettingsProvider({ children }) {

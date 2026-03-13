@@ -4,9 +4,15 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.preprocessing import LabelEncoder
+import os
 
 # Load features dataset
-df = pd.read_csv("D:/Rodo/Dev/GeoSentinel/backend/data/features_dataset.csv")
+import os
+BASE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+MODELS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "models")
+os.makedirs(MODELS_PATH, exist_ok=True)
+
+df = pd.read_csv(os.path.join(BASE_PATH, "features_dataset.csv"))
 
 le = LabelEncoder()
 df["region_encoded"] = le.fit_transform(df["region"])

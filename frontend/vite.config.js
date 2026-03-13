@@ -3,10 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss()
-  ],
+  plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
       output: {
@@ -15,10 +12,13 @@ export default defineConfig({
       }
     }
   },
+  define: {
+    __API_URL__: JSON.stringify(process.env.VITE_API_URL || '')
+  },
   server: {
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'http://localhost:8000',
+        target: 'http://localhost:8000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }

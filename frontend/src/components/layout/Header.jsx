@@ -1,5 +1,6 @@
 // Header component with logo and live clock
 import logo from '../../logo.png'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
   const [time, setTime] = useState(new Date())

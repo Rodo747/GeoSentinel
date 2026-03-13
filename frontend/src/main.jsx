@@ -1,3 +1,4 @@
+// GeoSentinel v1.0 — Production Build
 // React entry point
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'

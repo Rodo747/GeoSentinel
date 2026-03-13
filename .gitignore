@@ -1,0 +1,21 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.db
+backend/models/flood_model.pkl
+node_modules/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

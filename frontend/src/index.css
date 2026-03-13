@@ -1,0 +1,18 @@
+/* Global styles with Tailwind */
+@import "tailwindcss";
+
+* {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --sidebar-bg: #0d3342;
+  --sidebar-active: #1a4a5c;
+  --header-bg: #ffffff;
+  --content-bg: #f0f4f8;
+  --card-bg: #ffffff;
+  --accent: #00c896;
+  --text-primary: #1a2332;
+  --text-secondary: #6b7a8d;
+  --border: #e2e8f0;
+}

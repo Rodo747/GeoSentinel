@@ -6,7 +6,7 @@ export default function Footer() {
   useEffect(() => {
     const fetchReadings = async () => {
       try {
-        const res = await fetch('/api/iot/readings?limit=3')
+        const res = await fetch('https://geosentinel-production.up.railway.app/iot/readings?limit=3')
         const data = await res.json()
         setReadings(data.readings || [])
       } catch {

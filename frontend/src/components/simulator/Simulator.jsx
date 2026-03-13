@@ -69,7 +69,7 @@ export default function Simulator() {
   const runSimulation = async () => {
     setLoading(true)
     try {
-      const res = await fetch(`/api/simulate?lat=${LAT}&lon=${LON}&rainfall=${rainfall}&river_level=${river}&soil_saturation=${soil}`)
+      const res = await fetch(`https://geosentinel-production.up.railway.app/simulate?lat=${LAT}&lon=${LON}&rainfall=${rainfall}&river_level=${river}&soil_saturation=${soil}`)
       const data = await res.json()
       setResult(data)
       setHistory(prev => [{ rainfall, river, soil, profile: activeProfile.name, location: activeProfile.location, ...data }, ...prev].slice(0, 3))

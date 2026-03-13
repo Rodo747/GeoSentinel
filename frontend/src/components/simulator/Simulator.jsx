@@ -1,7 +1,7 @@
 // Scenario simulator component with sliders
 import { Sliders, RotateCcw, Zap, Users, AlertTriangle, CheckCircle } from 'lucide-react'
 import { useProfile } from '../../context/ProfileContext'
-
+import { useState, useEffect } from 'react'
 
 const RISK_LEVELS = {
   GREEN:  { label: 'Low Risk',      color: 'text-green-600',  bg: 'bg-green-50',  border: 'border-green-200', bar: 'bg-green-500' },

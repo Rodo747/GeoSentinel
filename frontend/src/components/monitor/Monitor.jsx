@@ -64,7 +64,7 @@ export default function Monitor() {
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        const res = await fetch(`/api/predict?lat=${activeProfile.lat}&lon=${activeProfile.lon}&location_name=${encodeURIComponent(activeProfile.location)}`)
+        const res = await fetch(`https://geosentinel-production.up.railway.app/predict?lat=${activeProfile.lat}&lon=${activeProfile.lon}&location_name=${encodeURIComponent(activeProfile.location)}`)
         const data = await res.json()
         setPrediction(data)
         const score = data?.rhvi?.rhvi_score || 0

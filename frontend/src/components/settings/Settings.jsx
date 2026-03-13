@@ -2,6 +2,7 @@
 import { Save, MapPin, Bell, Cpu, Globe, Plus, Trash2, Loader2, Circle } from 'lucide-react'
 import { useProfile } from '../../context/ProfileContext'
 import { useSettings } from '../../context/SettingsContext'
+import { useState, useEffect } from 'react'
 
 export default function Settings() {
   const [alertThreshold, setAlertThreshold] = useState(0.45)

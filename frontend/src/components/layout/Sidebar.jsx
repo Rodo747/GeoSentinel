@@ -1,4 +1,5 @@
 import { LayoutDashboard, Sliders, Brain, Settings, Info } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 const MAIN_NAV = [
   { id: 'monitor',      label: 'Monitor',      icon: LayoutDashboard },

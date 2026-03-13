@@ -1,4 +1,5 @@
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 import asyncio
@@ -14,7 +15,7 @@ from core.rhvi_calculator import calculate_rhvi
 from core.alert_engine import send_alert_email, should_send_alert
 from engines.flood_engine import FloodRiskEngine
 
-MODEL_PATH = "D:/Rodo/Dev/GeoSentinel/backend/models/flood_model.pkl"
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "flood_model.pkl")
 flood_engine = FloodRiskEngine(MODEL_PATH)
 
 app = FastAPI(

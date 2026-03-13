@@ -1,5 +1,6 @@
 import warnings
 import os
+import startup
 warnings.filterwarnings('ignore')
 
 import asyncio
@@ -14,6 +15,7 @@ from core.iot_manager import save_iot_reading, get_latest_readings
 from core.rhvi_calculator import calculate_rhvi
 from core.alert_engine import send_alert_email, should_send_alert
 from engines.flood_engine import FloodRiskEngine
+
 
 MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "flood_model.pkl")
 flood_engine = FloodRiskEngine(MODEL_PATH)

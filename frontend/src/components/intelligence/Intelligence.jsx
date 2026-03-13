@@ -28,8 +28,8 @@ export default function Intelligence() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const requests = [fetch(`/api/predict?lat=${activeProfile.lat}&lon=${activeProfile.lon}`)]
-        if (isBolivia) requests.push(fetch('/api/iot/readings?limit=50'))
+        const requests = [fetch(`https://geosentinel-production.up.railway.app/predict?lat=${activeProfile.lat}&lon=${activeProfile.lon}`)]
+        if (isBolivia) requests.push(fetch('https://geosentinel-production.up.railway.app/iot/readings?limit=50'))
         const results = await Promise.all(requests)
         const predData = await results[0].json()
         setPrediction(predData)

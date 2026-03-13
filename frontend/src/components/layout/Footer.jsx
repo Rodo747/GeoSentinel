@@ -1,5 +1,5 @@
 // Footer component with IoT readings status
-
+import { useState, useEffect } from 'react'
 export default function Footer() {
   const [readings, setReadings] = useState([])
 

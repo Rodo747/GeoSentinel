@@ -1,9 +1,10 @@
 import pandas as pd
 import numpy as np
+import os
 
 # Feature engineering for climate data
-BASE_PATH = "D:/Rodo/Dev/GeoSentinel/backend/data"
-
+BASE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+os.makedirs(BASE_PATH, exist_ok=True)
 def load_and_clean(filepath, region):
     df = pd.read_csv(filepath)
     df["time"] = pd.to_datetime(df["time"])

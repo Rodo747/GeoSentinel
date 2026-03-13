@@ -74,8 +74,8 @@ model_data = {
     "regions": le.classes_.tolist()
 }
 
-with open("D:/Rodo/Dev/GeoSentinel/backend/models/flood_model.pkl", "wb") as f:
+with open(os.path.join(MODELS_PATH, "flood_model.pkl"), "wb") as f:
     pickle.dump(model_data, f)
-    
-model.save_model("D:/Rodo/Dev/GeoSentinel/backend/models/flood_model.json")
+
+model.save_model(os.path.join(MODELS_PATH, "flood_model.json"))
 print(f"Model saved | AUC: {auc:.4f} | Regions: {le.classes_.tolist()}")

@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Circle, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useProfile } from '../../context/ProfileContext'
 import { useSettings } from '../../context/SettingsContext'
+import { useState, useEffect } from 'react'
 
 const RISK_COLOR = {
   GREEN:  { text: 'text-green-700',  bar: 'bg-green-600',  label: 'Low Risk',      border: 'border-green-200',  bg: 'bg-green-50' },

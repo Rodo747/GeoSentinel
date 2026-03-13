@@ -2,6 +2,7 @@
 import { TrendingUp, Shield, Activity, Droplets, Thermometer, Wind, Radio, Database } from 'lucide-react'
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts'
 import { useProfile } from '../../context/ProfileContext'
+import { useState, useEffect } from 'react'
 
 const RISK_COLOR = {
   GREEN:  { text: 'text-green-700',  bg: 'bg-green-50',  border: 'border-green-200',  label: 'Low Risk' },

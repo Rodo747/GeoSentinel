@@ -80,7 +80,7 @@ export default function Monitor() {
       } catch (e) { console.error(e) }
       if (isBolivia) {
         try {
-          const res = await fetch('/api/iot/readings?limit=20')
+          const res = await fetch('https://geosentinel-production.up.railway.app/iot/readings?limit=20')
           const data = await res.json()
           setIotReadings(data.readings || [])
         } catch (e) { console.error(e) }

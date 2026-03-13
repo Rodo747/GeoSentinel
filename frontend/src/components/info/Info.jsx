@@ -1,6 +1,6 @@
 // Info page component with project details
 import { useState, useEffect } from 'react'
-import { Shield, Globe, Cpu, Zap, Database, TrendingUp, AlertTriangle, CheckCircle, MapPin, Activity } from 'lucide-react'
+import { Shield, Globe, Cpu, Zap, Database, TrendingUp, AlertTriangle, CheckCircle, MapPin, Activity, BarChart2 } from 'lucide-react'
 
 const REGIONS = [
   'Bolivia', 'Bangladesh', 'Germany', 'Peru Lima', 'Peru Amazonia',

@@ -381,6 +381,31 @@ react-leaflet
 recharts
 axios
 ```
+## 12. Long term — The GeoSentinel Roadmap
+
+GeoSentinel is designed as an expandable multi-hazard intelligence platform. Each phase adds a new risk engine while sharing the same RHVI framework, data pipeline, and alert infrastructure:
+
+| Phase | Status | Engine | Data Sources |
+|-------|--------|--------|-------------|
+| 1 |  Current | FloodRiskEngine + RHVI + IoT | Open-Meteo, NASA, WorldPop, ESP32 |
+| 2 |  Next | LandslideEngine + DroughtEngine | Soil moisture, slope gradient, NDVI |
+| 3 |  Future | WildfireEngine | NASA FIRMS real-time fire data |
+| 4 |  Future | EpidemicEngine | WHO data + SIR/SEIR models |
+| 5 |  Vision | Technological & social threats | Multi-source risk fusion |
+
+The unified risk score across all engines follows the same formula structure:
+
+$$GeoSentinel_{global} = \sum_{k=1}^{n} w_k \cdot Engine_k(H, E, V)$$
+
+Where each engine contributes a weighted hazard component to a **global vulnerability score** for any point on Earth.
+
+The vision: a single platform that tells any community, anywhere, what threats are approaching — floods, droughts, fires, disease outbreaks — and what to do about it.
+
+---
+
+Because the next Cyclone Idai is already forming somewhere.
+
+And this time, the people in its path will know it's coming.
 
 ---
 
